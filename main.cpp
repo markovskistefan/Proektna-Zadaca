@@ -25,16 +25,31 @@ struct sortiranjePoeni {
 
 int main()
 {
-    vector<Covek*> v1;
+    vector<Covek*> vektor;
     ofstream fout("INKI832.Stefan.txt");
 
-    v1.push_back(new Covek(3, "Filip", 3.6));
-    v1.push_back(new Covek(2, "Kristijan", 7.3));
-    v1.push_back(new Covek(6, "Vladimir", 5.4));
-    v1.push_back(new Covek(7, "Dime", 10.2));
-    v1.push_back(new Covek(4, "Nikola", 1.9));
-    v1.push_back(new Covek(1, "Ivan", 9.5));
-    v1.push_back(new Covek(5, "Mario", 8.8));
+    vektor.push_back(new Covek(3, "Filip", 3.6));
+    vektor.push_back(new Covek(2, "Kristijan", 7.3));
+    vektor.push_back(new Covek(6, "Vladimir", 5.4));
+    vektor.push_back(new Covek(7, "Dime", 10.2));
+    vektor.push_back(new Covek(4, "Nikola", 1.9));
+    vektor.push_back(new Covek(1, "Ivan", 9.5));
+    vektor.push_back(new Covek(5, "Mario", 8.8));
 
+    for(const auto* c: vektor){
+        cout<<c->Ime<<" - "<<c->poeni<<endl;
+    }
+
+    sort(vektor.begin(), vektor.end(), sortiranjePoeni());
+
+    cout<<endl<<endl;
+    cout<<"Sortirana sodrzina na vektorot:"<<endl;
+    fout<<"Sortirana sodrzina na vektorot:"<<endl;
+    for(const auto* c: vektor){
+        cout<<c->Ime<<" - "<<c->poeni<<endl;
+        fout<<c->Ime<<" - "<<c->poeni<<endl;
+    }
+
+    fout.close();
     return 0;
 }

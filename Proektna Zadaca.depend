@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1653653288 source:c:\users\lenovo\desktop\codeblocks\proektna zadaca\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<algorithm>
+

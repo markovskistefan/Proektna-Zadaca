@@ -1,0 +1,8 @@
+Sortirana sodrzina na vektorot:
+Dime - 10.2
+Ivan - 9.5
+Mario - 8.8
+Kristijan - 7.3
+Vladimir - 5.4
+Filip - 3.6
+Nikola - 1.9
